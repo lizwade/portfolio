@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image";
 import styles from "./page.module.css";
+import Switch from "../app/components/Switch"
 
 export default function Home() {
   return (
@@ -17,7 +20,7 @@ export default function Home() {
           <li>
             Get started by smediting <code>src/app/page.tsx</code>.
           </li>
-          <li>Save and see your changes instantly.</li>
+          <Switch></Switch>
         </ol>
 
         <div className={styles.ctas}>
