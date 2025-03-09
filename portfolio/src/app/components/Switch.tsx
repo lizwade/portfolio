@@ -1,11 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Switch = () => {
+interface Props {
+  onChange: () => void;
+}
+
+
+const Switch: React.FC<Props> = ({onChange}) => {
+
   return (
     <StyledWrapper>
       <div className="toggle-container">
-        <input className="toggle-input" type="checkbox" />
+        <input className="toggle-input"
+          type="checkbox"
+          //defaultChecked="false" 
+        onChange={onChange}
+         />
         <div className="toggle-handle-wrapper">
           <div className="toggle-handle">
             <div className="toggle-handle-knob" />

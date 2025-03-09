@@ -3,6 +3,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Switch from "../app/components/Switch"
+import SolutionCard from "./components/SolutionCard";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProjectPanel from "./components/ProjectPanel";
 
 export default function Home() {
   return (
@@ -16,11 +20,13 @@ export default function Home() {
           height={38}
           priority
         />
+        <ProjectPanel></ProjectPanel>
         <ol>
           <li>
             Get started by smediting <code>src/app/page.tsx</code>.
           </li>
           <Switch></Switch>
+          <SolutionCard></SolutionCard>
         </ol>
 
         <div className={styles.ctas}>
