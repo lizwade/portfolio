@@ -16,7 +16,9 @@ function SolutionCard({ isShowingSolution }: SolutionCardProps) {
   return (
     <>
     
-      <div style={{ minHeight: '150px' }}>
+      <div
+        className="liz"
+        style={{ minHeight: '150px' }}>
         <Collapse in={isShowingSolution} dimension="width">
           <div id="example-collapse-text">
             <Card body style={{ width: '400px' }}>

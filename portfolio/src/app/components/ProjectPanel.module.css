@@ -1,0 +1,6 @@
+.panel {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    grid-row-start: 2;
+}

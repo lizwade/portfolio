@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <h1>Liz Wade</h1>
+        <h1 className="title">Liz Wade</h1>
     )
 }
 
