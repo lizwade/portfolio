@@ -22,6 +22,12 @@ export default function Home() {
           <li>
             <ProjectPanel></ProjectPanel>
           </li>
+          <li>
+            <ProjectPanel></ProjectPanel>
+          </li>
+          <li>
+            <ProjectPanel></ProjectPanel>
+          </li>
          
         </ul>
 

@@ -80,6 +80,7 @@ ul {
   flex-direction: row;
   gap: 32px;
   grid-row-start: 2;
+  margin: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
