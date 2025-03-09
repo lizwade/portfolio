@@ -2,34 +2,30 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import Switch from "../app/components/Switch"
-import SolutionCard from "./components/SolutionCard";
+import Header from "./components/Header"
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectPanel from "./components/ProjectPanel";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ProjectPanel></ProjectPanel>
-        <ol>
+    <div //className={styles.page}
+    >
+      <main //className={styles.main}
+      >
+        <Header></Header>
+       
+       
+        <ul>
           <li>
-            Get started by smediting <code>src/app/page.tsx</code>.
+             <ProjectPanel></ProjectPanel>
           </li>
-          <Switch></Switch>
-          <SolutionCard></SolutionCard>
-        </ol>
+         
+        </ul>
 
-        <div className={styles.ctas}>
+        <div //className={styles.ctas}
+        >
           <a
             className={styles.primary}
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
