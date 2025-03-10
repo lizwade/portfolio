@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Switch from '../components/Switch'
 import SolutionCard from "../components/SolutionCard";
 import ProblemCard from './ProblemCard';
-//import PictureCard from './PictureCard';
+import PictureCard from './PictureCard';
 //import styles from "./ProjectPanel.module.css";
 
 interface ProjectPanelProps {
@@ -30,6 +30,8 @@ function ProjectPanel({myProblem, mySolutionTitle, mySolutionText}: ProjectPanel
                 mySolutionTitle={mySolutionTitle}
                 mySolutionText={mySolutionText}
             ></SolutionCard>
+            <PictureCard isShowingSolution={isShowingSolution}></PictureCard>
+           
             
         </div>
     )

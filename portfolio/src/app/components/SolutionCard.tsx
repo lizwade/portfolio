@@ -19,12 +19,12 @@ function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: So
   return (
     
     
-      <div className='solpanel'
+      <div 
         
     //style={{ minHeight: '200px' }}
     >
-        <Collapse in={isShowingSolution} dimension="width">
-          <div id="example-collapse-text">
+        <Collapse in={isShowingSolution} dimension="width" >
+          <div id="example-collapse-text" >
             <Card className = 'lizcard'
             //</div>
             // body style={{ width: '18rem' }}
@@ -32,8 +32,9 @@ function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: So
           >
             <Card.Title>{`Solution: ${mySolutionTitle}`}</Card.Title>
             <Card.Text>{mySolutionText}</Card.Text>
-                          
+                         
           </Card>
+           
            
         </div>
        
