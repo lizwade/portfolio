@@ -90,6 +90,17 @@ ul {
   margin: 10px;
 }
 
+.solpanel {
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+footer {
+  color: gray;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

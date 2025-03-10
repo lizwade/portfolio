@@ -2,6 +2,7 @@
 //import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
+//import PictureCard from './PictureCard';
 
 
 
@@ -18,7 +19,7 @@ function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: So
   return (
     
     
-      <div
+      <div className='solpanel'
         
     //style={{ minHeight: '200px' }}
     >
@@ -32,8 +33,10 @@ function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: So
             <Card.Title>{`Solution: ${mySolutionTitle}`}</Card.Title>
             <Card.Text>{mySolutionText}</Card.Text>
                           
-            </Card>
-          </div>
+          </Card>
+           
+        </div>
+       
         </Collapse>
       </div>
     

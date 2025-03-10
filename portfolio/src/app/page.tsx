@@ -31,11 +31,14 @@ export default function Home() {
         solutionTitle: `MY MECHANIC`,
         solutionText: `A friendly RAG chatbot to help you find out how to actually turn your fog lights on (or whatever else you need to know).`,
         colour: `rgb(49, 223, 21)`
-      }
+      },
+      {
+        problem: `Typescript can slow down developers and feel like a series of annoying hoops to jump through.`,
+        solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
+        solutionText: 'A tongue-in-cheek animated song to remind developers why the effort is worth it.',
+        colour: `rgb(149, 103, 21)`
+      },
   ]
-
-
-
 
   return (
     <div //className={styles.page}
@@ -46,83 +49,27 @@ export default function Home() {
        
        
         <ul>
-     
-            <li>
-            <ProjectPanel
-              myProblem={projects[0].problem}
-              mySolutionTitle={projects[0].solutionTitle}
-            mySolutionText={projects[0].solutionText}></ProjectPanel>
-          </li>
-           <li>
-            <ProjectPanel
-              myProblem={projects[1].problem}
-              mySolutionTitle={projects[1].solutionTitle}
-            mySolutionText={projects[1].solutionText}></ProjectPanel>
-          </li>
-       
+          {projects.map((project, index) => (
+            <li key={index}>
+              <ProjectPanel
+                myProblem={projects[index].problem}
+                mySolutionTitle={projects[index].solutionTitle}
+                mySolutionText={projects[index].solutionText}>
+              </ProjectPanel>
+            </li>
+          ))}
          
         </ul>
 
-        <div //className={styles.ctas}
-        >
-          <a
-            //className={styles.primary}
-            href="https://lizwade.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              //className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            //className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
       </main>
-      <footer
+      {/* <footer
         //className={styles.footer}
       >
+        <p>No AI was involved in the making of this site, which I hand-coded using React, Typescript, pure CSS, a bit of Bootstrap, and Next.js</p>
+        <p><em>(In real life, I would probably use Bolt or ChatGPT to speed things up, but I wanted to show you I don't have to)</em></p>
+        <p><em>(Also I can't take credit for the cool lever design - that belongs to Victor Grae)</em> </p>
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://github.com/lizwade"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -133,9 +80,9 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          Liz
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }
