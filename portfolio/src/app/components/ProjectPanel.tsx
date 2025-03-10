@@ -1,10 +1,17 @@
 import { useState } from 'react';
-import Card from 'react-bootstrap/Card';
+//import Card from 'react-bootstrap/Card';
 import Switch from '../components/Switch'
 import SolutionCard from "../components/SolutionCard";
+import ProblemCard from './ProblemCard';
 //import styles from "./ProjectPanel.module.css";
 
-function ProjectPanel() {
+interface ProjectPanelProps {
+    myProblem: string;
+    mySolutionTitle: string;
+    mySolutionText: string;
+}
+
+function ProjectPanel({myProblem, mySolutionTitle, mySolutionText}: ProjectPanelProps) {
     const [isShowingSolution, setIsShowingSolution] = useState(false);
 
   
@@ -12,11 +19,16 @@ function ProjectPanel() {
     return (
         <div
             // className={styles.panel
-            className="projpanel"
-            >
-        <Card>The PROBLEM was this...</Card>
+             style={{ minHeight: '200px' }}
+            className="projpanel">
+
+            <ProblemCard myProblem={myProblem}></ProblemCard>
+            
             <Switch onChange={() => setIsShowingSolution(!isShowingSolution)}></Switch>
-        <SolutionCard isShowingSolution={isShowingSolution}></SolutionCard>
+            <SolutionCard isShowingSolution={isShowingSolution}
+                mySolutionTitle={mySolutionTitle}
+                mySolutionText={mySolutionText}
+            ></SolutionCard>
         </div>
     )
 }

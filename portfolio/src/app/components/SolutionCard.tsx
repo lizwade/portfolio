@@ -8,27 +8,35 @@ import Collapse from 'react-bootstrap/Collapse';
 
 interface SolutionCardProps {
   isShowingSolution: boolean;
+  mySolutionTitle: string;
+  mySolutionText: string;
 }
 
-function SolutionCard({ isShowingSolution }: SolutionCardProps) {
-  //const [open, setOpen] = useState(false);
+function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: SolutionCardProps) {
+ 
 
   return (
-    <>
+    
     
       <div
-        className="liz"
-        style={{ minHeight: '150px' }}>
+        
+    //style={{ minHeight: '200px' }}
+    >
         <Collapse in={isShowingSolution} dimension="width">
           <div id="example-collapse-text">
-            <Card body style={{ width: '400px' }}>
-                          My solution was to do a cool thing. Look how cool it was! 
-                          Click it and stuff!
+            <Card className = 'lizcard'
+            //</div>
+            // body style={{ width: '18rem' }}
+            body style={{ backgroundColor: 'rgb(249, 223, 21,1)' }}
+          >
+            <Card.Title>{`Solution: ${mySolutionTitle}`}</Card.Title>
+            <Card.Text>{mySolutionText}</Card.Text>
+                          
             </Card>
           </div>
         </Collapse>
       </div>
-    </>
+    
   );
 }
 

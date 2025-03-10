@@ -9,7 +9,34 @@ import Header from "./components/Header"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectPanel from "./components/ProjectPanel";
 
+interface project {
+  problem: string;
+  solutionTitle: string;
+  solutionText: string;
+  colour: string;
+}
+
 export default function Home() {
+
+  const projects: project[] =
+    [
+      {
+        problem: `There are many fairly sedentary people who want to walk more but never quite get round to it.`,
+        solutionTitle: `SOFA TO STRIDER`,
+        solutionText: `A mobile-first app that overcomes common hurdles by showing you when, where and why to walk.`,
+      colour: `rgb(249, 223, 21)`
+      },
+      {
+        problem: `It can be hard to find specific info about your own car. Chatbots are too general and your car manual is too long and dense.`,
+        solutionTitle: `MY MECHANIC`,
+        solutionText: `A friendly RAG chatbot to help you find out how to actually turn your fog lights on (or whatever else you need to know).`,
+        colour: `rgb(49, 223, 21)`
+      }
+  ]
+
+
+
+
   return (
     <div //className={styles.page}
     >
@@ -19,15 +46,20 @@ export default function Home() {
        
        
         <ul>
-          <li>
-            <ProjectPanel></ProjectPanel>
+     
+            <li>
+            <ProjectPanel
+              myProblem={projects[0].problem}
+              mySolutionTitle={projects[0].solutionTitle}
+            mySolutionText={projects[0].solutionText}></ProjectPanel>
           </li>
-          <li>
-            <ProjectPanel></ProjectPanel>
+           <li>
+            <ProjectPanel
+              myProblem={projects[1].problem}
+              mySolutionTitle={projects[1].solutionTitle}
+            mySolutionText={projects[1].solutionText}></ProjectPanel>
           </li>
-          <li>
-            <ProjectPanel></ProjectPanel>
-          </li>
+       
          
         </ul>
 

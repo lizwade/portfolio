@@ -66,6 +66,13 @@ body {
   background-color: cadetblue;
 }
 
+.lizcard {
+  /* background-color: rgb(249, 223, 21) !important; */
+  min-height: 170px;
+  width: 20rem;
+  /* width: '18rem' !important; */
+}
+
 a {
   color: inherit;
   text-decoration: none;
