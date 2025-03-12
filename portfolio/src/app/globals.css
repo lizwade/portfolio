@@ -16,7 +16,7 @@
 
 
 :root {
-  --background: #ffffff;
+  --background: #a6cadf;
   --foreground: #171717;
   line-height: 1.5;
   font-weight: 400;
@@ -50,17 +50,30 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
+  /* background-color: #a5d2ee !important; */
   font-family: Trilby, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
 }
 
-
 .title {
-  color: cadetblue;
-
+  color: rgb(23, 79, 161);
 }
+
+.word1 {
+  color: rgb(255, 234, 0);
+}
+
+.word2 {
+  color: rgb(255, 149, 0);
+}
+
+.word3 {
+  color: orangered;
+}
+
+
 
 .liz {
   background-color: cadetblue;

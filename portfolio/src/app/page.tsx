@@ -9,34 +9,72 @@ import Header from "./components/Header"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectPanel from "./components/ProjectPanel";
 
-interface project {
+interface Project {
   problem: string;
   solutionTitle: string;
   solutionText: string;
-  colour: string;
+  techStack: string[];
+  imagePath: string;
+  deployedLink?: string;
+  githubLink?: string;
+ 
+  colour?: string;
 }
 
 export default function Home() {
 
-  const projects: project[] =
+  const projects: Project[] =
     [
       {
         problem: `There are many fairly sedentary people who want to walk more but never quite get round to it.`,
         solutionTitle: `SOFA TO STRIDER`,
         solutionText: `A mobile-first app that overcomes common hurdles by showing you when, where and why to walk.`,
-      colour: `rgb(249, 223, 21)`
+         techStack: [],
+        imagePath: `portfolio/public/sofa_to_strider.png`,
+        deployedLink: ``,
+        githubLink: ``,
+        colour: `rgb(249, 223, 21)`
       },
       {
         problem: `It can be hard to find specific info about your own car. Chatbots are too general and your car manual is too long and dense.`,
         solutionTitle: `MY MECHANIC`,
         solutionText: `A friendly RAG chatbot to help you find out how to actually turn your fog lights on (or whatever else you need to know).`,
-        colour: `rgb(49, 223, 21)`
+        techStack: [],
+        imagePath: ``,
+        deployedLink: ``,
+        githubLink: ``,
+       
+        colour: `rgb(249, 223, 21)`
+      },
+      {
+        problem: `A job I really wanted was asking for Flask skills, which I didn't have.`,
+        solutionTitle: `FLASK IN FIVE HOURS`,
+        solutionText: `Prove I could get to grips with a new framework in less than a day.`,
+        techStack: [],
+        imagePath: ``,
+        deployedLink: ``,
+        githubLink: ``,
+        colour: `rgb(249, 223, 21)`
+      },
+      {
+        problem: `Streaming music puts millions of songs at our fingertips, but we've lost the mysterious delight of the unlabelled mixtape`,
+        solutionTitle: `BLIND MIXTAPE`,
+        solutionText: `An app for `,
+        techStack: [],
+        imagePath: ``,
+        deployedLink: ``,
+        githubLink: ``,
+        colour: `rgb(249, 223, 21)`
       },
       {
         problem: `Typescript can slow down developers and feel like a series of annoying hoops to jump through.`,
         solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
         solutionText: 'A tongue-in-cheek animated song to remind developers why the effort is worth it.',
-        colour: `rgb(149, 103, 21)`
+        techStack: [],
+        imagePath: ``,
+        deployedLink: ``,
+        githubLink: ``,
+        colour: `rgb(249, 223, 21)`
       },
   ]
 
@@ -46,6 +84,7 @@ export default function Home() {
       <main //className={styles.main}
       >
         <Header></Header>
+        <h2>Software Solutions</h2>
        
        
         <ul>
@@ -60,6 +99,12 @@ export default function Home() {
           ))}
          
         </ul>
+
+        <h2>Technical Storytelling</h2>
+        <p> IBM paper and Typescript song to go here</p>
+
+        <h2>Academic projects (or AI?)</h2>
+        <p> Genetic Algorithm, Image Classifier, Consumer Segmentation</p>
 
       </main>
       {/* <footer
