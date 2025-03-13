@@ -4,17 +4,21 @@
 //import styles from "./page.module.css";
 import './globals.css';
 import Header from "./components/Header"
+//import Card from 'react-bootstrap/Card';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectPanel from "./components/ProjectPanel";
+//import PictureCard from './components/AIPictureCard';
+//import SolutionCard from "./components/SolutionCard";
+//import type { SolutionCardProps } from './components/SolutionCard';
 
 export interface Project {
   problem: string;
   solutionTitle: string;
   solutionText: string;
-  techStack: string[];
-  imagePath: string;
+  techStack?: string[];
+  imagePath?: string;
   deployedLink?: string;
   githubLink?: string;
   youtubeLink?: string;
@@ -50,7 +54,7 @@ export default function Home() {
         colour: `rgb(249, 223, 21)`
       },
       {
-        problem: `A job I really wanted was asking for Flask skills, which I didn't have.`,
+        problem: `A job I was really interested in wanted someone who had built things with Flask.`,
         solutionTitle: `FLASK IN FIVE HOURS`,
         solutionText: `Prove I could get to grips with a new framework in less than a day.`,
         techStack: ['Python','Flask','Jinja'],
@@ -66,14 +70,33 @@ export default function Home() {
         solutionTitle: `BLIND MIXTAPE`,
         solutionText: `Send your friend a playlist they can't look at or skip over, but have to actually listen to.`,
         techStack: [],
-        imagePath: `/blind_mixtape_napkin_concept.png`,
+        imagePath: `/blind_mixtape_thumbnail.png`,
         deployedLink: ``,
         githubLink: `https://github.com/lizwade/blind-mixtape`,
         wip: true,
         colour: `rgb(249, 223, 21)`
       },
-    
-  ]
+    ]
+  
+  const techStories: Project[] =
+    [
+      {
+        problem: `IBM wanted to tell the story of how its brand  `,
+        solutionTitle: `AWARD-WINNING PAPER`,
+        solutionText: `I wrote this paper for IBM, which was awarded to only 5 brands in the world.`,
+        imagePath: `/IBM_Effie.pdf`,
+        deployedLink: `https://sofa-to-strider.vercel.app/`,
+        wip: false,
+      },
+{
+        problem: `Typescript can sometimes seem like series of hoops to jump through.`,
+        solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
+        solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
+  youtubeLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
+        wip: false,
+        colour: `rgb(249, 223, 21)`
+      }
+    ]
 
   return (
     <div //className={styles.page}
@@ -81,51 +104,46 @@ export default function Home() {
       <main //className={styles.main}
       >
         <Header></Header>
+
+        <section id="softwareSolutions">
         <h2>Software Solutions</h2>
-       
        
         <ul>
           {projects.map((project, index) => (
             <li key={index}>
               <ProjectPanel
-                // myProblem={projects[index].problem}
-                // mySolutionTitle={projects[index].solutionTitle}
-              // mySolutionText={projects[index].solutionText}
                 project={projects[index]}
               />
             </li>
-          ))}
-         
-        </ul>
+          ))}  
+          </ul>
+          </section>
 
         <h2>Technical Storytelling</h2>
-        <p> IBM paper and Typescript song to go here</p>
+    <ul>
+          {techStories.map((project, index) => (
+            <li key={index}>
+              <ProjectPanel
+                project={techStories[index]}
+              />
+            </li>
+          ))}  
+        </ul>
 
-        <h2>Past Adventures in AI</h2>
-        <p> Genetic Algorithm, Image Classifier, Consumer Segmentation</p>
+
+        {/* <h2>Past Adventures in AI</h2>
+        <p> Genetic Algorithm, Image Classifier, Consumer Segmentation</p> */}
 
       </main>
-      {/* <footer
+      <footer
         //className={styles.footer}
       >
-        <p>No AI was involved in the making of this site, which I hand-coded using React, Typescript, pure CSS, a bit of Bootstrap, and Next.js</p>
+        <p>Also check out <a href="https://github.com/lizwade/portfolio" target="_blank" rel="noopener noreferrer"> the repo for this portfolio,</a> which I hand-crafted in React without AI (just to prove I can).</p>
+        {/* <p>No AI was involved in the making of this site, which I hand-coded using React, Typescript, pure CSS, a bit of Bootstrap, and Next.js</p>
         <p><em>(In real life, I would probably use Bolt or ChatGPT to speed things up, but I wanted to show you I don't have to)</em></p>
-        <p><em>(Also I can't take credit for the cool lever design - that belongs to Victor Grae)</em> </p>
-        <a
-          href="https://github.com/lizwade"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Liz
-        </a>
-      </footer> */}
+        <p><em>(Also I can't take credit for the cool lever design - that belongs to Victor Grae)</em> </p> */}
+       
+      </footer>
     </div>
   );
 }

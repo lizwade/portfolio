@@ -89,7 +89,7 @@ const StyledWrapper = styled.div`
     border-radius: 50%;
     width: var(--knob-size);
     height: var(--knob-size);
-    background-image: radial-gradient(farthest-corner at 70% 30%, #fedee2 4%, #d63534 12% 24%, #a81a1a 50% 65%, #d63534 75%);
+    background-image: radial-gradient(farthest-corner at 70% 30%, #fedee2 4%, #d63534 12% 24%, #ec008b 50% 65%, #d63534 75%);
     transition: transform .24s cubic-bezier(.65, 1.35, .5, 1);
   }
 

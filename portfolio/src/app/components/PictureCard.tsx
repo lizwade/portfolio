@@ -24,11 +24,12 @@ function PictureCard({ isShowingSolution, source } : PictureCardProps ) {
               <iframe
                 // src="https://www.youtube.com/embed/RueifCX6hzo?si=hyYiJHLhHb5eiAIr"
                 src={source}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{  objectFit: 'cover' }}
                 // frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 //referrerpolicy="strict-origin-when-cross-origin"
-              // allowfullscreen
+                // allowfullscreen
+                
               >
                 
                 </iframe>

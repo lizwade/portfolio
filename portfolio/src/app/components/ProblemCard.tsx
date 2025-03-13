@@ -13,7 +13,7 @@ function ProblemCard({ myProblem }: ProblemCardProps) {
             //style={{ minHeight: '220px' }}
         >
     <Card className = 'lizcard'
-                body style={{ backgroundColor: 'rgb(249, 223, 21, 0.3)' }}
+                body style={{ backgroundColor: "#fff" }}
             >
                 <Card.Title>Problem</Card.Title>
                 <Card.Text>{myProblem}</Card.Text>

@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   src: url('../fonts/Trilby-Medium-Edu.woff2') format("woff2"),
     url('../fonts/Trilby-Medium-Edu.woff') format("woff");
   font-family: 'Trilby';
@@ -12,7 +12,7 @@
   font-family: 'Trilby';
   font-style: italic;
   font-weight: 500;
-}
+} */
 
 
 :root {
@@ -32,12 +32,12 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 
 
@@ -51,28 +51,50 @@ body {
   color: var(--foreground);
   background: var(--background);
   /* background-color: #a5d2ee !important; */
-  font-family: Trilby, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: notoSans;
+  /* system-ui, Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
 }
 
 .title {
-  color: rgb(23, 79, 161);
+  color: #00adef;
+  font-weight: 800;
+
+
 }
 
 .word1 {
-  color: rgb(255, 234, 0);
+  color: #ec008b
 }
 
 .word2 {
-  color: rgb(255, 149, 0);
+  color: #ec008b
 }
 
 .word3 {
-  color: orangered;
+  color: #ec008b
 }
 
+.divider {
+  color: #fff100
+}
+
+#softwareSolutions {
+  background-color: #00adef;
+  color: white;
+}
+
+/* Header {
+  background-color: #ec008b;
+} */
+h1,
+h2,
+h3,
+h4 {
+  padding: 1rem;
+}
 
 
 .liz {
@@ -114,15 +136,16 @@ footer {
   color: gray;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: Trilby, Arial, Helvetica, sans-serif
+  font-family: notoSans,
+    /* Arial, Helvetica, sans-serif */
 }
