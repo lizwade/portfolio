@@ -138,7 +138,7 @@ export default function Home() {
       <footer
         //className={styles.footer}
       >
-        <p>Also check out <a href="https://github.com/lizwade/portfolio" target="_blank" rel="noopener noreferrer"> the repo for this portfolio,</a> which I hand-crafted in React without AI (just to prove I can).</p>
+        <h6>Also check out <a href="https://github.com/lizwade/portfolio" target="_blank" rel="noopener noreferrer"> the repo for this portfolio,</a> which I hand-crafted in React without AI (just to prove I can).</h6>
         {/* <p>No AI was involved in the making of this site, which I hand-coded using React, Typescript, pure CSS, a bit of Bootstrap, and Next.js</p>
         <p><em>(In real life, I would probably use Bolt or ChatGPT to speed things up, but I wanted to show you I don't have to)</em></p>
         <p><em>(Also I can't take credit for the cool lever design - that belongs to Victor Grae)</em> </p> */}
