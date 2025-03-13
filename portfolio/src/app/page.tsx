@@ -18,7 +18,7 @@ export interface Project {
   solutionTitle: string;
   solutionText: string;
   techStack?: string[];
-  imagePath?: string;
+  imagePath: string;
   deployedLink?: string;
   githubLink?: string;
   youtubeLink?: string;
@@ -92,9 +92,10 @@ export default function Home() {
         problem: `Typescript can sometimes seem like series of hoops to jump through.`,
         solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
         solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
-  youtubeLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
+        youtubeLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
         wip: false,
-        colour: `rgb(249, 223, 21)`
+        colour: `rgb(249, 223, 21)`,
+        imagePath: ``
       }
     ]
 
