@@ -25,11 +25,26 @@ function ProjectPanel(props: { project: Project }) {
                 mySolutionTitle={props.project.solutionTitle}
                 mySolutionText={props.project.solutionText}
             ></SolutionCard>
-            <PictureCard isShowingSolution={isShowingSolution}></PictureCard>
-           
-            
+
+            {props.project.youtubeLink ?
+                <PictureCard
+                    isShowingSolution={isShowingSolution}
+                    source={props.project.youtubeLink} >
+                </PictureCard>
+                :
+                <PictureCard
+                    isShowingSolution={isShowingSolution}
+                    source={props.project.imagePath} >
+                </PictureCard>
+            }
+
         </div>
     )
 }
 
 export default ProjectPanel;
+
+//  return (
+//     <div>
+//       {isLoggedIn ? <h1>Welcome back!</h1> : <h1>Please log in.</h1>}
+//     </div>

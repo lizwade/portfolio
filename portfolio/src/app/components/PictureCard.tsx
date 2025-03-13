@@ -3,36 +3,31 @@ import Collapse from 'react-bootstrap/Collapse';
 
 
 interface PictureCardProps {
-    isShowingSolution: boolean;
+  isShowingSolution: boolean;
+  source: string;
 }
 
-function PictureCard({isShowingSolution} : PictureCardProps ) {
+function PictureCard({ isShowingSolution, source } : PictureCardProps ) {
     return (
-        // <div>
-        //     <Card className = 'lizcard'
-        //         body style={{ backgroundColor: 'rgb(249, 223, 21, 0.3)' }}
-        //     >
-        //         I will be a picture</Card>
-        //     </div>
-
-
-      <div 
-        
+      <div        
     //style={{ minHeight: '200px' }}
-    >
+      >
         <Collapse in={isShowingSolution} dimension="width" >
           <div id="example-collapse-text" >
-            <Card className = 'lizcard'
+            <Card //className='lizcard'
+              style={{ width: '100%', height: '170px' }}
             //</div>
             // body style={{ width: '18rem' }}
            
                     >
                         
               <iframe
-                src="https://www.youtube.com/embed/RueifCX6hzo?si=hyYiJHLhHb5eiAIr"
+                // src="https://www.youtube.com/embed/RueifCX6hzo?si=hyYiJHLhHb5eiAIr"
+                src={source}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 // frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                // referrerpolicy="strict-origin-when-cross-origin"
+                //referrerpolicy="strict-origin-when-cross-origin"
               // allowfullscreen
               >
                 

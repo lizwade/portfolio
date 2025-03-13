@@ -27,14 +27,14 @@ export default function Home() {
   const projects: Project[] =
     [
       {
-        problem: `There are many fairly sedentary people who want to walk more but never quite get round to it.`,
+        problem: `There are many fairly sedentary people who know they ought to walk more but never quite get round to it.`,
         solutionTitle: `SOFA TO STRIDER`,
         solutionText: `A mobile-first app that overcomes common hurdles by showing you when, where and why to walk.`,
         techStack: ['React', 'Typescript', 'Node.js', 'Next.js', 'Vitest','OpenWeather API', 'Google Places API', 'Google Photos API', 'Open AI API'],
-        imagePath: `portfolio/public/sofa_to_strider.png`,
+        imagePath: `/sofa_to_strider.png`,
         deployedLink: `https://sofa-to-strider.vercel.app/`,
         githubLink: `https://github.com/sumeyacodes/sofa-to-strider`,
-        youtubeLink: `https://www.youtube.com/watch?v=qj_6hMQgz_Q`,
+        youtubeLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
         wip: false,
         colour: `rgb(249, 223, 21)`
       },
@@ -42,8 +42,8 @@ export default function Home() {
         problem: `Our teammate Alistair has had his Seat Ibiza for 4 years and he still doesn't know how to turn the fog lights on.`,
         solutionTitle: `MY MECHANIC`,
         solutionText: `A RAG chatbot that applies the power of ChatGPT to Alistair's car manual, giving friendly, correct, sourced answers without hallucinations.`,
-        techStack: ['Pinecone Vector Database', 'OpenAI', 'React',  ],
-        imagePath: ``,
+        techStack: ['Pinecone Vector Database', 'OpenAI', 'React'],
+        imagePath: `/awaiting_image.jpeg`,
         deployedLink: ``,
         githubLink: `https://github.com/SchoolOfCode/my-mechanic`,
         wip: false,
@@ -57,7 +57,7 @@ export default function Home() {
         imagePath: ``,
         deployedLink: ``,
         githubLink: ``,
-        youtubeLink: `https://youtu.be/bkDmuo7oSOM`,
+        youtubeLink: `https://www.youtube.com/embed/bkDmuo7oSOM?si=FQGwoBOzo8DsoBHR`,
         wip: false,
         colour: `rgb(249, 223, 21)`
       },
@@ -66,7 +66,7 @@ export default function Home() {
         solutionTitle: `BLIND MIXTAPE`,
         solutionText: `Send your friend a playlist they can't look at or skip over, but have to actually listen to.`,
         techStack: [],
-        imagePath: `portfolio/public/blind_mixtape_napkin_concept.png`,
+        imagePath: `/blind_mixtape_napkin_concept.png`,
         deployedLink: ``,
         githubLink: `https://github.com/lizwade/blind-mixtape`,
         wip: true,
