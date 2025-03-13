@@ -25,10 +25,18 @@ function PictureCard({isShowingSolution} : PictureCardProps ) {
             <Card className = 'lizcard'
             //</div>
             // body style={{ width: '18rem' }}
-            // body style={{ backgroundColor: 'rgb(249, 223, 21,1)' }}
+           
                     >
                         
-            {/* <iframe  src="https://www.youtube.com/embed/RueifCX6hzo?si=hyYiJHLhHb5eiAIr"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
+              <iframe
+                src="https://www.youtube.com/embed/RueifCX6hzo?si=hyYiJHLhHb5eiAIr"
+                // frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                // referrerpolicy="strict-origin-when-cross-origin"
+              // allowfullscreen
+              >
+                
+                </iframe>
            
                          
           </Card>

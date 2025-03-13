@@ -4,18 +4,13 @@ import Switch from '../components/Switch'
 import SolutionCard from "../components/SolutionCard";
 import ProblemCard from './ProblemCard';
 import PictureCard from './PictureCard';
+import type { Project } from '../page'
 //import styles from "./ProjectPanel.module.css";
 
-interface ProjectPanelProps {
-    myProblem: string;
-    mySolutionTitle: string;
-    mySolutionText: string;
-}
 
-function ProjectPanel({myProblem, mySolutionTitle, mySolutionText}: ProjectPanelProps) {
+function ProjectPanel(props: { project: Project }) {
     const [isShowingSolution, setIsShowingSolution] = useState(false);
-
-  
+    
 
     return (
         <div
@@ -23,12 +18,12 @@ function ProjectPanel({myProblem, mySolutionTitle, mySolutionText}: ProjectPanel
              style={{ minHeight: '200px' }}
             className="projpanel">
 
-            <ProblemCard myProblem={myProblem}></ProblemCard>
+            <ProblemCard myProblem={props.project.problem}></ProblemCard>
             
             <Switch onChange={() => setIsShowingSolution(!isShowingSolution)}></Switch>
             <SolutionCard isShowingSolution={isShowingSolution}
-                mySolutionTitle={mySolutionTitle}
-                mySolutionText={mySolutionText}
+                mySolutionTitle={props.project.solutionTitle}
+                mySolutionText={props.project.solutionText}
             ></SolutionCard>
             <PictureCard isShowingSolution={isShowingSolution}></PictureCard>
            

@@ -9,7 +9,7 @@ import Header from "./components/Header"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectPanel from "./components/ProjectPanel";
 
-interface Project {
+export interface Project {
   problem: string;
   solutionTitle: string;
   solutionText: string;
@@ -17,7 +17,8 @@ interface Project {
   imagePath: string;
   deployedLink?: string;
   githubLink?: string;
- 
+  youtubeLink?: string;
+  wip: boolean;
   colour?: string;
 }
 
@@ -29,53 +30,49 @@ export default function Home() {
         problem: `There are many fairly sedentary people who want to walk more but never quite get round to it.`,
         solutionTitle: `SOFA TO STRIDER`,
         solutionText: `A mobile-first app that overcomes common hurdles by showing you when, where and why to walk.`,
-         techStack: [],
+        techStack: ['React', 'Typescript', 'Node.js', 'Next.js', 'Vitest','OpenWeather API', 'Google Places API', 'Google Photos API', 'Open AI API'],
         imagePath: `portfolio/public/sofa_to_strider.png`,
-        deployedLink: ``,
-        githubLink: ``,
+        deployedLink: `https://sofa-to-strider.vercel.app/`,
+        githubLink: `https://github.com/sumeyacodes/sofa-to-strider`,
+        youtubeLink: `https://www.youtube.com/watch?v=qj_6hMQgz_Q`,
+        wip: false,
         colour: `rgb(249, 223, 21)`
       },
       {
-        problem: `It can be hard to find specific info about your own car. Chatbots are too general and your car manual is too long and dense.`,
+        problem: `Our teammate Alistair has had his Seat Ibiza for 4 years and he still doesn't know how to turn the fog lights on.`,
         solutionTitle: `MY MECHANIC`,
-        solutionText: `A friendly RAG chatbot to help you find out how to actually turn your fog lights on (or whatever else you need to know).`,
-        techStack: [],
+        solutionText: `A RAG chatbot that applies the power of ChatGPT to Alistair's car manual, giving friendly, correct, sourced answers without hallucinations.`,
+        techStack: ['Pinecone Vector Database', 'OpenAI', 'React',  ],
         imagePath: ``,
         deployedLink: ``,
-        githubLink: ``,
-       
+        githubLink: `https://github.com/SchoolOfCode/my-mechanic`,
+        wip: false,
         colour: `rgb(249, 223, 21)`
       },
       {
         problem: `A job I really wanted was asking for Flask skills, which I didn't have.`,
         solutionTitle: `FLASK IN FIVE HOURS`,
         solutionText: `Prove I could get to grips with a new framework in less than a day.`,
-        techStack: [],
+        techStack: ['Python','Flask','Jinja'],
         imagePath: ``,
         deployedLink: ``,
         githubLink: ``,
+        youtubeLink: `https://youtu.be/bkDmuo7oSOM`,
+        wip: false,
         colour: `rgb(249, 223, 21)`
       },
       {
-        problem: `Streaming music puts millions of songs at our fingertips, but we've lost the mysterious delight of the unlabelled mixtape`,
+        problem: `Streaming music puts millions of songs at our fingertips, but we've lost the delightful mysteries of the unlabelled mixtape`,
         solutionTitle: `BLIND MIXTAPE`,
-        solutionText: `An app for `,
+        solutionText: `Send your friend a playlist they can't look at or skip over, but have to actually listen to.`,
         techStack: [],
-        imagePath: ``,
+        imagePath: `portfolio/public/blind_mixtape_napkin_concept.png`,
         deployedLink: ``,
-        githubLink: ``,
+        githubLink: `https://github.com/lizwade/blind-mixtape`,
+        wip: true,
         colour: `rgb(249, 223, 21)`
       },
-      {
-        problem: `Typescript can slow down developers and feel like a series of annoying hoops to jump through.`,
-        solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
-        solutionText: 'A tongue-in-cheek animated song to remind developers why the effort is worth it.',
-        techStack: [],
-        imagePath: ``,
-        deployedLink: ``,
-        githubLink: ``,
-        colour: `rgb(249, 223, 21)`
-      },
+    
   ]
 
   return (
@@ -91,10 +88,11 @@ export default function Home() {
           {projects.map((project, index) => (
             <li key={index}>
               <ProjectPanel
-                myProblem={projects[index].problem}
-                mySolutionTitle={projects[index].solutionTitle}
-                mySolutionText={projects[index].solutionText}>
-              </ProjectPanel>
+                // myProblem={projects[index].problem}
+                // mySolutionTitle={projects[index].solutionTitle}
+              // mySolutionText={projects[index].solutionText}
+                project={projects[index]}
+              />
             </li>
           ))}
          
@@ -103,7 +101,7 @@ export default function Home() {
         <h2>Technical Storytelling</h2>
         <p> IBM paper and Typescript song to go here</p>
 
-        <h2>Academic projects (or AI?)</h2>
+        <h2>Past Adventures in AI</h2>
         <p> Genetic Algorithm, Image Classifier, Consumer Segmentation</p>
 
       </main>
