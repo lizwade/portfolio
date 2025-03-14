@@ -17,12 +17,15 @@ export interface Project {
   problem: string;
   solutionTitle: string;
   solutionText: string;
-  techStack?: string[];
+
   imagePath: string;
-  deployedLink?: string;
-  githubLink?: string;
   youtubeLink?: string;
+
+  githubLink?: string;
+  deployedLink?: string;
+  techStack?: string[];
   wip: boolean;
+ 
   colour?: string;
 }
 
@@ -81,15 +84,15 @@ export default function Home() {
   const techStories: Project[] =
     [
       {
-        problem: `IBM wanted to tell the story of how its brand  `,
-        solutionTitle: `AWARD-WINNING PAPER`,
-        solutionText: `I wrote this paper for IBM, which was awarded to only 5 brands in the world.`,
+        problem: `IBM has been responsible for some of technology's biggest breakthroughs, but newer companies were getting the limelight.`,
+        solutionTitle: `"A LEADING BRAND, A LASTING BRAND`,
+        solutionText: `I wrote this award-winning paper, which saw IBM crowned one of the five most effective brands in the world.`,
         imagePath: `/IBM_Effie.pdf`,
         deployedLink: `https://sofa-to-strider.vercel.app/`,
         wip: false,
       },
 {
-        problem: `Typescript can sometimes seem like series of hoops to jump through.`,
+        problem: `Developers who are used to Javascript sometimes resent the time it can take to meet Typescript's requirements.`,
         solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
         solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
         youtubeLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
