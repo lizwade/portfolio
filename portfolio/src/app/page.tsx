@@ -21,11 +21,12 @@ export interface Project {
   imagePath: string;
   youtubeLink?: string;
 
-  githubLink?: string;
-  deployedLink?: string;
-  techStack?: string[];
-  wip: boolean;
- 
+  details: {
+    githubLink?: string;
+    deployedLink?: string;
+    techStack?: string[];
+    wip: boolean;
+  }
   colour?: string;
 }
 
@@ -37,46 +38,55 @@ export default function Home() {
         problem: `There are many fairly sedentary people who know they ought to walk more but never quite get round to it.`,
         solutionTitle: `SOFA TO STRIDER`,
         solutionText: `A mobile-first app that overcomes common hurdles by showing you when, where and why to walk.`,
-        techStack: ['React', 'Typescript', 'Node.js', 'Next.js', 'Vitest','OpenWeather API', 'Google Places API', 'Google Photos API', 'Open AI API'],
         imagePath: `/sofa_to_strider.png`,
-        deployedLink: `https://sofa-to-strider.vercel.app/`,
-        githubLink: `https://github.com/sumeyacodes/sofa-to-strider`,
         youtubeLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
-        wip: false,
+
+        details: {
+          techStack: ['React', 'Typescript', 'Node.js', 'Next.js', 'Vitest', 'OpenWeather API', 'Google Places API', 'Google Photos API', 'Open AI API'],
+          deployedLink: `https://sofa-to-strider.vercel.app/`,
+          githubLink: `https://github.com/sumeyacodes/sofa-to-strider`,
+          wip: false,
+        },
         colour: `rgb(249, 223, 21)`
       },
       {
         problem: `Our teammate Alistair has had his Seat Ibiza for 4 years and he still doesn't know how to turn the fog lights on.`,
         solutionTitle: `MY MECHANIC`,
         solutionText: `A RAG chatbot that applies the power of ChatGPT to Alistair's car manual, giving friendly, correct, sourced answers without hallucinations.`,
-        techStack: ['Pinecone Vector Database', 'OpenAI', 'React'],
         imagePath: `/awaiting_image.jpeg`,
-        deployedLink: ``,
-        githubLink: `https://github.com/SchoolOfCode/my-mechanic`,
-        wip: false,
+        details: {
+          techStack: ['Pinecone Vector Database', 'OpenAI', 'React'],
+          deployedLink: ``,
+          githubLink: `https://github.com/SchoolOfCode/my-mechanic`,
+          wip: false,
+        },
         colour: `rgb(249, 223, 21)`
       },
       {
         problem: `A job I was really interested in wanted someone who had built things with Flask.`,
         solutionTitle: `FLASK IN FIVE HOURS`,
         solutionText: `Prove I could get to grips with a new framework in less than a day.`,
-        techStack: ['Python','Flask','Jinja'],
-        imagePath: ``,
-        deployedLink: ``,
-        githubLink: ``,
         youtubeLink: `https://www.youtube.com/embed/bkDmuo7oSOM?si=FQGwoBOzo8DsoBHR`,
-        wip: false,
+        imagePath: ``,
+        details: {
+          techStack: ['Python','Flask','Jinja'],
+          deployedLink: ``,
+          githubLink: `https://github.com/lizwade/flask-tutorial`,
+          wip: false,
+        },
         colour: `rgb(249, 223, 21)`
       },
       {
         problem: `Streaming music puts millions of songs at our fingertips, but we've lost the delightful mysteries of the unlabelled mixtape`,
         solutionTitle: `BLIND MIXTAPE`,
         solutionText: `Send your friend a playlist they can't look at or skip over, but have to actually listen to.`,
-        techStack: [],
         imagePath: `/blind_mixtape_thumbnail.png`,
-        deployedLink: ``,
-        githubLink: `https://github.com/lizwade/blind-mixtape`,
-        wip: true,
+        details: {
+          techStack: [],
+          deployedLink: ``,
+          githubLink: `https://github.com/lizwade/blind-mixtape`,
+          wip: true,
+        },
         colour: `rgb(249, 223, 21)`
       },
     ]
@@ -88,17 +98,23 @@ export default function Home() {
         solutionTitle: `"A LEADING BRAND, A LASTING BRAND`,
         solutionText: `I wrote this award-winning paper, which saw IBM crowned one of the five most effective brands in the world.`,
         imagePath: `/IBM_Effie.pdf`,
-        deployedLink: `https://sofa-to-strider.vercel.app/`,
-        wip: false,
+        details: {
+          wip: false,
+          deployedLink: `/IBM_Effie.pdf`,
+
+        },
       },
 {
         problem: `Developers who are used to Javascript sometimes resent the time it can take to meet Typescript's requirements.`,
         solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
         solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
         youtubeLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
-        wip: false,
+        imagePath: ``,
+        details: {
+          wip: false,
+        },
         colour: `rgb(249, 223, 21)`,
-        imagePath: ``
+        
       }
     ]
 

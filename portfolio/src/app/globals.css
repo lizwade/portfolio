@@ -126,6 +126,21 @@ h4 {
   /* width: '18rem' !important; */
 }
 
+.techstack {
+  font-size: small;
+}
+
+.wip {
+  font-size: small;
+
+  color: white;
+
+}
+
+mark {
+  background-color: #ec008b;
+}
+
 a {
   color: inherit;
   text-decoration: none;
