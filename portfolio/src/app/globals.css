@@ -120,10 +120,22 @@ h4 {
 }
 
 .lizcard {
-  /* background-color: rgb(249, 223, 21) !important; */
   min-height: 170px;
   width: 20rem;
-  /* width: '18rem' !important; */
+  /* new from here */
+  /* max-width: 100%; */
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+/* Mobile: Make cards take full width */
+@media (max-width: 768px) {
+  .lizcard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .techstack {
@@ -153,9 +165,13 @@ ul {
 .projpanel {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 1em;
   grid-row-start: 2;
   margin: 10px;
+  /* new from here on */
+  flex-wrap: wrap;
+  /* justify-content: center; */
+
 }
 
 .solpanel {
