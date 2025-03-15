@@ -4,7 +4,7 @@ import Image from 'next/image';
 //import Switch from '../components/Switch'
 import SolutionCard from "../components/SolutionCard";
 import ProblemCard from './ProblemCard';
-import PictureCard from './PictureCard';
+//import PictureCard from './PictureCard';
 import type { Project } from '../page'
 //import styles from "./ProjectPanel.module.css";
 
@@ -16,7 +16,7 @@ function ProjectPanel(props: { project: Project }) {
     return (
         <div
             // className={styles.panel
-            style={{ minHeight: '200px' }}
+            style={{ minHeight: '350px' }}
             className="projpanel">
 
             <ProblemCard
@@ -30,9 +30,11 @@ function ProjectPanel(props: { project: Project }) {
             <SolutionCard isShowingSolution={isShowingSolution}
                 mySolutionTitle={props.project.solutionTitle}
                 mySolutionText={props.project.solutionText}
+                myImageLink={props.project.imageLink}
+                myImageType={props.project.imageType}
             ></SolutionCard>
 
-            {props.project.youtubeLink ?
+            {/* {props.project.youtubeLink ?
                 <PictureCard
                     isShowingSolution={isShowingSolution}
                     source={props.project.youtubeLink} >
@@ -42,7 +44,7 @@ function ProjectPanel(props: { project: Project }) {
                     isShowingSolution={isShowingSolution}
                     source={props.project.imagePath} >
                 </PictureCard>
-            }
+            } */}
 
         
             

@@ -13,10 +13,15 @@ import ProjectPanel from "./components/ProjectPanel";
 //import SolutionCard from "./components/SolutionCard";
 //import type { SolutionCardProps } from './components/SolutionCard';
 
+export type PicType = "youtube" | "image";
+
 export interface Project {
   problem: string;
   solutionTitle: string;
   solutionText: string;
+
+  imageLink: string;
+  imageType: PicType;
 
   imagePath: string;
   youtubeLink?: string;
@@ -38,6 +43,10 @@ export default function Home() {
         problem: `There are many fairly sedentary people who know they ought to walk more but never quite get round to it.`,
         solutionTitle: `SOFA TO STRIDER`,
         solutionText: `A mobile-first app that overcomes common hurdles by showing you when, where and why to walk.`,
+
+imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
+  imageType: "youtube",
+
         imagePath: `/sofa_to_strider.png`,
         youtubeLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
 
@@ -53,6 +62,10 @@ export default function Home() {
         problem: `Our teammate Alistair has had his Seat Ibiza for 4 years and he still doesn't know how to turn the fog lights on.`,
         solutionTitle: `MY MECHANIC`,
         solutionText: `A RAG chatbot that applies the power of ChatGPT to Alistair's car manual, giving friendly, correct, sourced answers without hallucinations.`,
+       
+       imageLink: `/my_mechanic_screenshot.jpeg`,
+  imageType: "image",
+       
         imagePath: `/my_mechanic_screenshot.jpeg`,
         details: {
           techStack: ['Pinecone Vector Database', 'OpenAI', 'React'],
@@ -66,6 +79,10 @@ export default function Home() {
         problem: `A job I was really interested in wanted someone who had built things with Flask.`,
         solutionTitle: `FLASK IN FIVE HOURS`,
         solutionText: `Prove I could get to grips with a new framework in less than a day.`,
+
+     imageLink: `https://www.youtube.com/embed/bkDmuo7oSOM?si=FQGwoBOzo8DsoBHR`,
+  imageType: "youtube",
+
         youtubeLink: `https://www.youtube.com/embed/bkDmuo7oSOM?si=FQGwoBOzo8DsoBHR`,
         imagePath: ``,
         details: {
@@ -80,6 +97,10 @@ export default function Home() {
         problem: `Streaming music puts millions of songs at our fingertips, but we've lost the delightful mysteries of the unlabelled mixtape`,
         solutionTitle: `BLIND MIXTAPE`,
         solutionText: `Send your friend a playlist they can't look at or skip over, but have to actually listen to.`,
+
+   imageLink: `/blind_mixtape_thumbnail.png`,
+  imageType: "image",
+
         imagePath: `/blind_mixtape_thumbnail.png`,
         details: {
           techStack: [],
@@ -97,6 +118,11 @@ export default function Home() {
         problem: `IBM has been responsible for some of technology's biggest breakthroughs, but newer companies were getting the limelight.`,
         solutionTitle: `"A LEADING BRAND, A LASTING BRAND`,
         solutionText: `I wrote this award-winning paper, which saw IBM crowned one of the five most effective brands in the world.`,
+       
+         imageLink: `/IBM_Effie.pdf`,
+  imageType: "image",
+       
+       
         imagePath: `/IBM_Effie.pdf`,
         details: {
           wip: false,
@@ -107,7 +133,11 @@ export default function Home() {
 {
         problem: `Developers who are used to Javascript sometimes resent the time it can take to meet Typescript's requirements.`,
         solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
-        solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
+  solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
+        
+         imageLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
+  imageType: "youtube",
+
         youtubeLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
         imagePath: ``,
         details: {

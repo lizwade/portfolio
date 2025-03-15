@@ -2,7 +2,8 @@
 //import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
-//import PictureCard from './PictureCard';
+import PictureCard from './PictureCard';
+import type { PicType } from '../page'
 
 
 
@@ -11,9 +12,12 @@ export interface SolutionCardProps {
   isShowingSolution: boolean;
   mySolutionTitle: string;
   mySolutionText: string;
+  myImageType: PicType;
+  myImageLink: string;
+  
 }
 
-function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: SolutionCardProps) {
+function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText, myImageLink }: SolutionCardProps) {
  
 
   return (
@@ -30,8 +34,18 @@ function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: So
           >
             <Card.Title>{`Solution: ${mySolutionTitle}`}</Card.Title>
             <Card.Text>{mySolutionText}</Card.Text>
-                         
-          </Card>
+
+          
+                <PictureCard
+                    isShowingSolution={isShowingSolution}
+                    source={myImageLink} >
+                </PictureCard>
+               
+            
+
+
+                 
+          </Card> {/* end Solution card */}
            
            
         </div>

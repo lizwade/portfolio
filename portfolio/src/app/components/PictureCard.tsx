@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-import Collapse from 'react-bootstrap/Collapse';
+//import Collapse from 'react-bootstrap/Collapse';
 
 
 interface PictureCardProps {
@@ -7,15 +7,13 @@ interface PictureCardProps {
   source: string;
 }
 
-function PictureCard({ isShowingSolution, source } : PictureCardProps ) {
+function PictureCard({ source } : PictureCardProps ) {
     return (
-      <div        
-    //style={{ minHeight: '200px' }}
-      >
-        <Collapse in={isShowingSolution}  >
-          <div id="example-collapse-text" >
+      <div>
+        {/* <Collapse in={isShowingSolution}  > */}
+          <div  >
             <Card className='lizcard'
-              // style={{ width: '100%', height: '170px' }}
+              style={{ width: '100%'}}
             //</div>
             // body style={{ width: '18rem' }}
            
@@ -40,7 +38,7 @@ function PictureCard({ isShowingSolution, source } : PictureCardProps ) {
            
         </div>
        
-        </Collapse>
+        {/* </Collapse> */}
       </div>
     
     )
