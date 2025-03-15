@@ -25,7 +25,7 @@ function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: So
     >
         <Collapse in={isShowingSolution} dimension="width" >
           <div id="example-collapse-text" >
-            <Card className = 'lizcard'
+            <Card className = 'lizcard notprobcard'
             //</div>
             // body style={{ width: '18rem' }}
             body style={{ backgroundColor: '#fff100' }}

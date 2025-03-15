@@ -53,7 +53,7 @@ export default function Home() {
         problem: `Our teammate Alistair has had his Seat Ibiza for 4 years and he still doesn't know how to turn the fog lights on.`,
         solutionTitle: `MY MECHANIC`,
         solutionText: `A RAG chatbot that applies the power of ChatGPT to Alistair's car manual, giving friendly, correct, sourced answers without hallucinations.`,
-        imagePath: `/awaiting_image.jpeg`,
+        imagePath: `/my_mechanic_screenshot.jpeg`,
         details: {
           techStack: ['Pinecone Vector Database', 'OpenAI', 'React'],
           deployedLink: ``,

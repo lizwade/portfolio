@@ -14,8 +14,8 @@ function PictureCard({ isShowingSolution, source } : PictureCardProps ) {
       >
         <Collapse in={isShowingSolution} dimension="width" >
           <div id="example-collapse-text" >
-            <Card //className='lizcard'
-              style={{ width: '100%', height: '170px' }}
+            <Card className='lizcard'
+              // style={{ width: '100%', height: '170px' }}
             //</div>
             // body style={{ width: '18rem' }}
            
