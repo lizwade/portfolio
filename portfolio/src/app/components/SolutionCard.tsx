@@ -19,15 +19,13 @@ function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText }: So
   return (
     
     
-      <div 
-        
-    //style={{ minHeight: '200px' }}
-    >
-        <Collapse in={isShowingSolution} dimension="width" >
-          <div id="example-collapse-text" >
-            <Card className = 'lizcard notprobcard'
-            //</div>
-            // body style={{ width: '18rem' }}
+      <div className='notprobcard' >
+        <Collapse in={isShowingSolution}  >
+        <div
+          // id="example-collapse-text"
+        >
+            <Card className = 'lizcard' 
+           
             body style={{ backgroundColor: '#fff100' }}
           >
             <Card.Title>{`Solution: ${mySolutionTitle}`}</Card.Title>

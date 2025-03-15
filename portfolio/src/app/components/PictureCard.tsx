@@ -12,7 +12,7 @@ function PictureCard({ isShowingSolution, source } : PictureCardProps ) {
       <div        
     //style={{ minHeight: '200px' }}
       >
-        <Collapse in={isShowingSolution} dimension="width" >
+        <Collapse in={isShowingSolution}  >
           <div id="example-collapse-text" >
             <Card className='lizcard'
               // style={{ width: '100%', height: '170px' }}
