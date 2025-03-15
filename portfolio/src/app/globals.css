@@ -142,6 +142,11 @@ h4 {
   }
 }
 
+.switchbox {
+  display: flex;
+  justify-content: right;
+}
+
 .notprobcard {
   transition: 1s ease-in-out;
 }

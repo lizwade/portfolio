@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 //import Card from 'react-bootstrap/Card';
-import Switch from '../components/Switch'
+//import Switch from '../components/Switch'
 import SolutionCard from "../components/SolutionCard";
 import ProblemCard from './ProblemCard';
 import PictureCard from './PictureCard';
@@ -19,9 +19,14 @@ function ProjectPanel(props: { project: Project }) {
             style={{ minHeight: '200px' }}
             className="projpanel">
 
-            <ProblemCard myProblem={props.project.problem}></ProblemCard>
+            <ProblemCard
+                myProblem={props.project.problem}
+                isShowingSolution={isShowingSolution}
+                setIsShowingSolution={setIsShowingSolution}
+                
+            ></ProblemCard>
             
-            <Switch onChange={() => setIsShowingSolution(!isShowingSolution)}></Switch>
+            {/* <Switch onChange={() => setIsShowingSolution(!isShowingSolution)}></Switch> */}
             <SolutionCard isShowingSolution={isShowingSolution}
                 mySolutionTitle={props.project.solutionTitle}
                 mySolutionText={props.project.solutionText}
@@ -80,7 +85,4 @@ function ProjectPanel(props: { project: Project }) {
 
 export default ProjectPanel;
 
-//  return (
-//     <div>
-//       {isLoggedIn ? <h1>Welcome back!</h1> : <h1>Please log in.</h1>}
-//     </div>
+
