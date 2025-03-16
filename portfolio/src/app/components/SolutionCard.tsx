@@ -1,12 +1,8 @@
-//import { useState } from 'react';
-//import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
 import PictureCard from './PictureCard';
+
 import type { PicType } from '../page'
-
-
-
 
 export interface SolutionCardProps {
   isShowingSolution: boolean;

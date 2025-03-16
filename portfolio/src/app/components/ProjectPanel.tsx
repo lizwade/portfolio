@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import Image from 'next/image';
-//import Card from 'react-bootstrap/Card';
-//import Switch from '../components/Switch'
 import SolutionCard from "../components/SolutionCard";
 import ProblemCard from './ProblemCard';
-//import PictureCard from './PictureCard';
+
 import type { Project } from '../page'
-//import styles from "./ProjectPanel.module.css";
+
 
 
 function ProjectPanel(props: { project: Project }) {
@@ -15,39 +13,23 @@ function ProjectPanel(props: { project: Project }) {
 
     return (
         <div
-            // className={styles.panel
             style={{ minHeight: '340px' }}
             className="projpanel">
 
             <ProblemCard
                 myProblem={props.project.problem}
                 isShowingSolution={isShowingSolution}
-                setIsShowingSolution={setIsShowingSolution}
-                
+                setIsShowingSolution={setIsShowingSolution}              
             ></ProblemCard>
             
-            {/* <Switch onChange={() => setIsShowingSolution(!isShowingSolution)}></Switch> */}
+
             <SolutionCard isShowingSolution={isShowingSolution}
                 mySolutionTitle={props.project.solutionTitle}
                 mySolutionText={props.project.solutionText}
                 myImageLink={props.project.imageLink}
                 myImageType={props.project.imageType}
             ></SolutionCard>
-
-            {/* {props.project.youtubeLink ?
-                <PictureCard
-                    isShowingSolution={isShowingSolution}
-                    source={props.project.youtubeLink} >
-                </PictureCard>
-                :
-                <PictureCard
-                    isShowingSolution={isShowingSolution}
-                    source={props.project.imagePath} >
-                </PictureCard>
-            } */}
-
         
-            
             {
                 (isShowingSolution && props.project.details.deployedLink) //if this is true
                 && // return the right hand side of this expression i.e. render what follows (otherwise render nothing)

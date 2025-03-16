@@ -117,11 +117,11 @@ h4 {
   width: 20rem;
 }
 
-.lizcard body {
-  display: flex !important;
+/* .lizcard body {
+  display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 /* Mobile: Make cards take full width */
 @media (max-width: 768px) {

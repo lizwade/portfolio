@@ -1,31 +1,21 @@
 "use client"
 
-//import Image from "next/image";
-//import styles from "./page.module.css";
 import './globals.css';
-import Header from "./components/Header"
-//import Card from 'react-bootstrap/Card';
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Header from "./components/Header"
 import ProjectPanel from "./components/ProjectPanel";
-//import PictureCard from './components/AIPictureCard';
-//import SolutionCard from "./components/SolutionCard";
-//import type { SolutionCardProps } from './components/SolutionCard';
+
 
 export type PicType = "youtube" | "image";
-
 export interface Project {
   problem: string;
   solutionTitle: string;
   solutionText: string;
-
-  imageLink: string;
   imageType: PicType;
-
-  imagePath: string;
-  youtubeLink?: string;
-
+  imageLink: string;
+  secondImageType?: PicType;
+  secondImageLink?: string;
   details: {
     githubLink?: string;
     deployedLink?: string;
@@ -44,11 +34,11 @@ export default function Home() {
         solutionTitle: `SOFA TO STRIDER`,
         solutionText: `A mobile-first app that overcomes common hurdles by showing you when, where and why to walk.`,
 
-imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
+imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
   imageType: "youtube",
 
-        imagePath: `/sofa_to_strider.png`,
-        youtubeLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
+        secondImageLink: `/sofa_to_strider.png`,
+        secondImageType: "image",
 
         details: {
           techStack: ['React', 'Typescript', 'Node.js', 'Next.js', 'Vitest', 'OpenWeather API', 'Google Places API', 'Google Photos API', 'Open AI API'],
@@ -63,10 +53,11 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
         solutionTitle: `MY MECHANIC`,
         solutionText: `A RAG chatbot that applies the power of ChatGPT to Alistair's car manual, giving friendly, correct, sourced answers without hallucinations.`,
        
-       imageLink: `/my_mechanic_screenshot.jpeg`,
+       imageLink: `/my_mechanic_thumbnail.jpeg`,
   imageType: "image",
        
-        imagePath: `/my_mechanic_screenshot.jpeg`,
+        secondImageLink: `/my_mechanic_screenshot.jpeg`,
+        secondImageType: "image",
         details: {
           techStack: ['Pinecone Vector Database', 'OpenAI', 'React'],
           deployedLink: ``,
@@ -83,8 +74,6 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
      imageLink: `https://www.youtube.com/embed/bkDmuo7oSOM?si=FQGwoBOzo8DsoBHR`,
   imageType: "youtube",
 
-        youtubeLink: `https://www.youtube.com/embed/bkDmuo7oSOM?si=FQGwoBOzo8DsoBHR`,
-        imagePath: ``,
         details: {
           techStack: ['Python','Flask','Jinja'],
           deployedLink: ``,
@@ -98,10 +87,9 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
         solutionTitle: `BLIND MIXTAPE`,
         solutionText: `Send your friend a playlist they can't look at or skip over, but have to actually listen to.`,
 
-   imageLink: `/blind_mixtape_thumbnail.png`,
+   imageLink: `/blind_mixtape_thumbnail.jpg`,
   imageType: "image",
 
-        imagePath: `/blind_mixtape_thumbnail.png`,
         details: {
           techStack: [],
           deployedLink: ``,
@@ -119,11 +107,10 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
         solutionTitle: `"A LEADING BRAND, A LASTING BRAND`,
         solutionText: `I wrote this award-winning paper, which saw IBM crowned one of the five most effective brands in the world.`,
        
-         imageLink: `/IBM_Effie.pdf`,
+         imageLink: `/ibm_thumbnail.png`,
   imageType: "image",
        
        
-        imagePath: `/IBM_Effie.pdf`,
         details: {
           wip: false,
           deployedLink: `/IBM_Effie.pdf`,
@@ -135,11 +122,9 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
         solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
   solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
         
-         imageLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
+         imageLink: `https://www.youtube.com/embed/RueifCX6hzo`,
   imageType: "youtube",
 
-        youtubeLink: `https://www.youtube.com/embed/RueifCX6hzo?si=pxXeutFHNoloA6kF`,
-        imagePath: ``,
         details: {
           wip: false,
         },
@@ -149,9 +134,9 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
     ]
 
   return (
-    <div //className={styles.page}
+    <div 
     >
-      <main //className={styles.main}
+      <main 
       >
         <Header></Header>
 
@@ -186,12 +171,9 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?si=pLbet1PNScUgIncW`,
 
       </main>
       <footer
-        //className={styles.footer}
+
       >
         <h6>Also check out <a href="https://github.com/lizwade/portfolio" target="_blank" rel="noopener noreferrer"> the repo for this portfolio,</a> which I hand-crafted in React without AI (just to prove I can).</h6>
-        {/* <p>No AI was involved in the making of this site, which I hand-coded using React, Typescript, pure CSS, a bit of Bootstrap, and Next.js</p>
-        <p><em>(In real life, I would probably use Bolt or ChatGPT to speed things up, but I wanted to show you I don't have to)</em></p>
-        <p><em>(Also I can't take credit for the cool lever design - that belongs to Victor Grae)</em> </p> */}
        
       </footer>
     </div>
