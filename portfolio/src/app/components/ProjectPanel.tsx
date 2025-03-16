@@ -16,7 +16,7 @@ function ProjectPanel(props: { project: Project }) {
     return (
         <div
             // className={styles.panel
-            style={{ minHeight: '350px' }}
+            style={{ minHeight: '340px' }}
             className="projpanel">
 
             <ProblemCard

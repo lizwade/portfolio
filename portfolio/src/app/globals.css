@@ -33,14 +33,6 @@
 
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
-
 
 html,
 body {
@@ -62,8 +54,6 @@ body {
 .title {
   color: #00adef;
   font-weight: 800;
-
-
 }
 
 .word1 {
@@ -93,6 +83,7 @@ body {
 /* Header {
   background-color: #ec008b;
 } */
+
 h1,
 h2,
 h3,
@@ -115,20 +106,21 @@ h4 {
 }
 
 
+
+
 .liz {
   background-color: cadetblue;
 }
 
 .lizcard {
-  min-height: 170px;
+  min-height: 150px;
   width: 20rem;
+}
 
-  /* transition: 1s ease-in-out; */
-
-  /* new from here */
-  /* max-width: 100%; This makes animation jumpy as the box can only be as wide as the text as its gradually rendered */
-  /* display: flex; */
-  /* flex-direction: column; */
+.lizcard body {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Mobile: Make cards take full width */
@@ -153,11 +145,11 @@ h4 {
 }
 
 .techstack {
-  font-size: small;
+  font-size: medium;
 }
 
 .wip {
-  font-size: small;
+  font-size: large;
 
   color: white;
 
@@ -174,6 +166,8 @@ a {
 
 ul {
   list-style: none;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
 .projpanel {
@@ -209,6 +203,5 @@ footer {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: notoSans,
-    /* Arial, Helvetica, sans-serif */
+  font-family: notoSans, Arial, Helvetica, sans-serif
 }
