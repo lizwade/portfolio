@@ -26,7 +26,7 @@ function SolutionCard({ isShowingSolution, mySolutionTitle, mySolutionText, myIm
         >
             <Card className = 'lizcard' 
            
-            body style={{ backgroundColor: '#fff100' }}
+            body style={{ backgroundColor: '#fff5be' }}
           >
             <Card.Title>{`Solution: ${mySolutionTitle}`}</Card.Title>
             <Card.Text>{mySolutionText}</Card.Text>

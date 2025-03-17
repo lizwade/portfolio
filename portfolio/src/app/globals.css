@@ -52,38 +52,33 @@ body {
 }
 
 .title {
-  color: #00adef;
-  font-weight: 800;
+  color: rgb(91, 111, 145);
+  font-weight: 200;
+
 }
 
-.word1 {
-  color: #ec008b;
-  font-weight: 400;
-}
-
-.word2 {
-  color: #ec008b;
-  font-weight: 400;
-}
-
+.word1,
+.word2,
 .word3 {
-  color: #ec008b;
-  font-weight: 400;
+  color: #e46bb2;
+  font-weight: 500;
 }
+
+
 
 .divider {
-  color: #fff100
+  color: #f7ef08
 }
 
 #softwareSolutions {
-  background-color: #00adef;
-  color: white;
+  background-color: #a8d9ff;
+  color: rgb(91, 111, 145);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
 #ai {
-  background-color: rgb(150, 56, 179);
+  background-color: rgb(190, 139, 205);
   color: white;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -91,7 +86,7 @@ body {
 }
 
 #storytelling {
-  background-color: #ec008b;
+  background-color: #e46bb2;
   color: white;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -116,8 +111,16 @@ h6 {
   padding-bottom: 1rem;
 }
 
+
+h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-bottom: 2rem;
+}
+
 h1 {
   padding-top: 0;
+  font-weight: 700;
+  color: rgb(91, 111, 145);
 
 }
 

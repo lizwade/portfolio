@@ -70,7 +70,7 @@ export default function Home() {
       },
 
       {
-        problem: `A job I was really interested in wanted someone who had built things with Flask.`,
+        problem: `A job I was interested in wanted someone who had built things with Flask.`,
         solutionTitle: `FLASK IN FIVE HOURS`,
         solutionText: `Prove I could get to grips with a new framework in less than a day.`,
 
@@ -140,8 +140,8 @@ export default function Home() {
     [
       {
         problem: `Most scheduling problems are NP-complete, so cannot be solved by any known polymomial-time algorithms.`,
-        solutionTitle: `AI: GENETIC ALGORITHM`,
-        solutionText: `I designed and built this AI system from scratch that outperformed a hill-climbing algorithm.`,
+        solutionTitle: `EVOLUTIONARY AI`,
+        solutionText: `In 2014, I designed and built this genetic algorithm from scratch that outperformed a hill-climbing algorithm.`,
        
         imageLink: `https://www.youtube.com/embed/C4wsuY9aoKM`,
         imageType: "youtube",
@@ -175,7 +175,7 @@ export default function Home() {
        {
         problem: `Companies need to know who their best customers are so they can target their most lucrative prospects.`,
         solutionTitle: `SEGMENTATION`,
-        solutionText: `I cleaned, scaled, vectorized, and clustered population data then compared it to client data to set marketing strategy.`,
+        solutionText: `I cleaned, scaled, vectorized, and clustered population data then compared it to client data to inform the marketing strategy.`,
         
         imageLink: `cluster_thumbnail.png`,
         imageType: "image",
@@ -198,7 +198,7 @@ export default function Home() {
         <Header></Header>
 
         <section id="softwareSolutions">
-        <h2>Software Solutions</h2>
+        <h2>SOFTWARE SOLUTIONS</h2>
        
         <ul>
           {projects.map((project, index) => (
@@ -213,7 +213,7 @@ export default function Home() {
 
 
       <section id="ai">
-        <h2>AI knowledge</h2>
+        <h2>AI KNOWLEDGE</h2>
          <ul>
           {aiProjects.map((project, index) => (
             <li key={index}>
@@ -226,7 +226,7 @@ export default function Home() {
           </section>
         
          <section id="storytelling">
-        <h2>Technical Storytelling</h2>
+        <h2>TECHNICAL STORYTELLING</h2>
     <ul>
           {techStories.map((project, index) => (
             <li key={index}>
@@ -244,7 +244,7 @@ export default function Home() {
       <footer
 
       >
-        <h6>Also check out <a href="https://github.com/lizwade/portfolio" target="_blank" rel="noopener noreferrer"> the repo for this portfolio,</a> which I hand-crafted in React without AI (just to prove I can).</h6>
+        <h6>Also check out <a href="https://github.com/lizwade/portfolio" target="_blank" rel="noopener noreferrer"> the repo for this portfolio,</a> which I hand-crafted in React without AI (except for debugging) just to show I can.</h6>
        
       </footer>
     </div>

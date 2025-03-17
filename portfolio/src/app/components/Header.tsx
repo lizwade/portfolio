@@ -8,9 +8,9 @@ function Header() {
                 
                 <span className="word1"> Simplifier </span>
                 <span className="divider"> ● </span>
-                <span className="word2">  Storyteller  </span>
+                <span className="word2">  Strategist  </span>
                    <span className="divider"> ● </span>
-                <span className="word3"> Software Developer</span>
+                <span className="word3"> Software Storyteller</span>
             </h4>
            
             
