@@ -78,7 +78,28 @@ body {
 #softwareSolutions {
   background-color: #00adef;
   color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
+
+#ai {
+  background-color: rgb(150, 56, 179);
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+}
+
+#storytelling {
+  background-color: #ec008b;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+}
+
+
+
 
 /* Header {
   background-color: #ec008b;
@@ -168,6 +189,7 @@ ul {
   list-style: none;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
+
 }
 
 .projpanel {

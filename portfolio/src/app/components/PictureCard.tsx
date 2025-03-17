@@ -19,7 +19,8 @@ function PictureCard({ source } : PictureCardProps ) {
                 src={source}
                 style={{  objectFit: 'cover' }}
                 // frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
                 //referrerpolicy="strict-origin-when-cross-origin"
                 // allowfullscreen
                 

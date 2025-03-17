@@ -34,8 +34,8 @@ export default function Home() {
         solutionTitle: `SOFA TO STRIDER`,
         solutionText: `A mobile-first app that overcomes common hurdles by showing you when, where and why to walk.`,
 
-imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
-  imageType: "youtube",
+        imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
+        imageType: "youtube",
 
         secondImageLink: `/sofa_to_strider.png`,
         secondImageType: "image",
@@ -48,16 +48,18 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
         },
         colour: `rgb(249, 223, 21)`
       },
+
       {
         problem: `Our teammate Alistair has had his Seat Ibiza for 4 years and he still doesn't know how to turn the fog lights on.`,
         solutionTitle: `MY MECHANIC`,
         solutionText: `A RAG chatbot that applies the power of ChatGPT to Alistair's car manual, giving friendly, correct, sourced answers without hallucinations.`,
        
-       imageLink: `/my_mechanic_thumbnail.jpeg`,
-  imageType: "image",
+        imageLink: `/my_mechanic_thumbnail.jpeg`,
+        imageType: "image",
        
         secondImageLink: `/my_mechanic_screenshot.jpeg`,
         secondImageType: "image",
+
         details: {
           techStack: ['Pinecone Vector Database', 'OpenAI', 'React'],
           deployedLink: ``,
@@ -66,13 +68,14 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
         },
         colour: `rgb(249, 223, 21)`
       },
+
       {
         problem: `A job I was really interested in wanted someone who had built things with Flask.`,
         solutionTitle: `FLASK IN FIVE HOURS`,
         solutionText: `Prove I could get to grips with a new framework in less than a day.`,
 
-     imageLink: `https://www.youtube.com/embed/bkDmuo7oSOM?si=FQGwoBOzo8DsoBHR`,
-  imageType: "youtube",
+        imageLink: `https://www.youtube.com/embed/bkDmuo7oSOM?si=FQGwoBOzo8DsoBHR`,
+        imageType: "youtube",
 
         details: {
           techStack: ['Python','Flask','Jinja'],
@@ -82,34 +85,33 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
         },
         colour: `rgb(249, 223, 21)`
       },
-      {
-        problem: `Streaming music puts millions of songs at our fingertips, but we've lost the delightful mysteries of the unlabelled mixtape`,
-        solutionTitle: `BLIND MIXTAPE`,
-        solutionText: `Send your friend a playlist they can't look at or skip over, but have to actually listen to.`,
+      // {
+      //   problem: `Streaming music puts millions of songs at our fingertips, but we've lost the delightful mysteries of the unlabelled mixtape`,
+      //   solutionTitle: `BLIND MIXTAPE`,
+      //   solutionText: `Send your friend a playlist they can't look at or skip over, but have to actually listen to.`,
 
-   imageLink: `/blind_mixtape_thumbnail.jpg`,
-  imageType: "image",
+      //   imageLink: `/blind_mixtape_thumbnail.jpg`,
+      //   imageType: "image",
 
-        details: {
-          techStack: [],
-          deployedLink: ``,
-          githubLink: `https://github.com/lizwade/blind-mixtape`,
-          wip: true,
-        },
-        colour: `rgb(249, 223, 21)`
-      },
+      //   details: {
+      //     techStack: [],
+      //     deployedLink: ``,
+      //     githubLink: `https://github.com/lizwade/blind-mixtape`,
+      //     wip: true,
+      //   },
+      //   colour: `rgb(249, 223, 21)`
+      // },
     ]
   
   const techStories: Project[] =
     [
       {
         problem: `IBM has been responsible for some of technology's biggest breakthroughs, but newer companies were getting the limelight.`,
-        solutionTitle: `"A LEADING BRAND, A LASTING BRAND`,
+        solutionTitle: `"A LEADING BRAND, A LASTING BRAND"`,
         solutionText: `I wrote this award-winning paper, which saw IBM crowned one of the five most effective brands in the world.`,
        
-         imageLink: `/ibm_thumbnail.png`,
-  imageType: "image",
-       
+        imageLink: `/ibm_thumbnail.png`,
+        imageType: "image",
        
         details: {
           wip: false,
@@ -117,21 +119,76 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
 
         },
       },
-{
+
+      {
         problem: `Developers who are used to Javascript sometimes resent the time it can take to meet Typescript's requirements.`,
         solutionTitle: `"WHY WE HAVE TYPESCRIPT" SONG`,
-  solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
+        solutionText: `I wrote and recorded this song and video to remind people why the effort is worth it. `,
         
-         imageLink: `https://www.youtube.com/embed/RueifCX6hzo`,
-  imageType: "youtube",
+        imageLink: `https://www.youtube.com/embed/RueifCX6hzo`,
+        imageType: "youtube",
 
         details: {
           wip: false,
         },
-        colour: `rgb(249, 223, 21)`,
-        
+        colour: `rgb(249, 223, 21)`, 
       }
     ]
+  
+  
+  const aiProjects: Project[] =
+    [
+      {
+        problem: `Most scheduling problems are NP-complete, so cannot be solved by any known polymomial-time algorithms.`,
+        solutionTitle: `AI: GENETIC ALGORITHM`,
+        solutionText: `I designed and built this AI system from scratch that outperformed a hill-climbing algorithm.`,
+       
+        imageLink: `https://www.youtube.com/embed/C4wsuY9aoKM`,
+        imageType: "youtube",
+        
+       
+        details: {
+          wip: false,
+          techStack: ["Java", "Netbeans"],
+          githubLink: `https://github.com/lizwade/m450`,
+          deployedLink: `/genetic_algorithm_paper.pdf`,
+
+        },
+      },
+
+      {
+        problem: `It was 2018, and computers were still pretty bad at understanding the content of pictures.`,
+        solutionTitle: `MACHINE LEARNING CLASSIFIER`,
+        solutionText: `Using transfer learning, I built and trained a new AI to successfully classify flower images by species.`,
+        
+        imageLink: `/flower_classifier_thumbnail.png`,
+        imageType: "image",
+
+        details: {
+          wip: false,
+          deployedLink: `/image_classifier_project.html`,
+          techStack: [`Python`, `Jupyter Notebooks`,`numpy`, `Pytorch`, `vgg13`, `Supervised Learning` ],
+        },
+        colour: `rgb(249, 223, 21)`, 
+      },
+
+       {
+        problem: `Companies need to know who their best customers are so they can target their most lucrative prospects.`,
+        solutionTitle: `SEGMENTATION`,
+        solutionText: `I cleaned, scaled, vectorized, and clustered population data then compared it to client data to set marketing strategy.`,
+        
+        imageLink: `cluster_thumbnail.png`,
+        imageType: "image",
+
+        details: {
+          wip: false,
+          deployedLink: `/identify_customer_segments.html`,
+          techStack: [`Python`, `Jupyter Notebooks`,`numpy`, `pandas`, `scikit-learn`, `Unsupervised Learning` ],
+        },
+        colour: `rgb(249, 223, 21)`, 
+      }
+    ]
+
 
   return (
     <div 
@@ -152,8 +209,23 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
             </li>
           ))}  
           </ul>
-          </section>
+        </section>
 
+
+      <section id="ai">
+        <h2>AI knowledge</h2>
+         <ul>
+          {aiProjects.map((project, index) => (
+            <li key={index}>
+              <ProjectPanel
+                project={aiProjects[index]}
+              />
+            </li>
+          ))}  
+          </ul>
+          </section>
+        
+         <section id="storytelling">
         <h2>Technical Storytelling</h2>
     <ul>
           {techStories.map((project, index) => (
@@ -163,11 +235,10 @@ imageLink: `https://www.youtube.com/embed/qj_6hMQgz_Q?modestbranding=1&rel=0`,
               />
             </li>
           ))}  
-        </ul>
+          </ul>
+          </section>
 
-
-        {/* <h2>Past Adventures in AI</h2>
-        <p> Genetic Algorithm, Image Classifier, Consumer Segmentation</p> */}
+       
 
       </main>
       <footer
